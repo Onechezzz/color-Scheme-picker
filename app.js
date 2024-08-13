@@ -11,7 +11,10 @@ function generateRandomColor(){
 
 function setRandomColours(){
 	cols.forEach(col=> {
-		col.style.background = generateRandomColor()
+		const text = col.querySelector('h2')
+		const color = generateRandomColor()
+		text.textContent = color
+		col.style.background = color
 	})
 }
 
