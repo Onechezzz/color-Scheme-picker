@@ -1,5 +1,10 @@
 const cols = document.querySelectorAll('.col')
 
+document.addEventListener('keydown', event =>{
+	if (event.code.toLowerCase() === 'space'){
+		setRandomColours()
+	}
+})
 // function generateRandomColor(){
 // 	let color = '';
 // 	const hexCodes ='0123456789ABCDEF'
