@@ -7,9 +7,12 @@ document.addEventListener('keydown', event =>{
 	}
 })
 
+
 document.addEventListener('click', event =>{
 	const type = event.target.dataset.type
-	
+	if(type === 'screen'){
+		setRandomColours()
+	}
 	if (type === 'lock'){
 		const node = event.target.tagName.toLowerCase() === 'i'
 			? event.target
@@ -17,9 +20,11 @@ document.addEventListener('click', event =>{
 		node.classList.toggle('fa-lock-open')
 		node.classList.toggle('fa-lock')
 	}
+	
 	else if(type === 'copy'){
 		copyToClipboard(event.target.textContent)
 	}
+	
 })
 // function generateRandomColor(){
 // 	let color = '';
